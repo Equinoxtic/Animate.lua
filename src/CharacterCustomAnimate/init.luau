@@ -2,7 +2,7 @@
 
 	* Custom 'Animate' Script for Character. (Easily reusable and can override default roblox animations.)
 	* Made by @Aeronoxtic
-	* Version 1.0.4
+	* Version 1.0.5
 	* Date Created: 02/03/2025
 	* Date Update: 02/04/2025
 
@@ -14,10 +14,6 @@
 
 local Includes = require(game.Workspace.Includes);
 
-local RemoteEvents = Includes.ReplicatedStorage.RemoteEvents.Player;
-
-local OverrideAnimations: RemoteEvent = RemoteEvents.OverrideCharacterAnimations;
-
 local _settings = require(Includes.Modules.Settings);
 
 local AnimationBase = require(Includes.Modules.AnimationBase);
@@ -26,6 +22,8 @@ local GroupHandler = require(Includes.Modules.GroupHandler);
 local ScriptSettings = require(script.Settings);
 local Utility = require(script.Utility);
 local Constants = require(script.Constants);
+
+local OverrideAnimations: RemoteEvent = ScriptSettings.EventPath;
 
 local NoUpdateOnLoopSuccess, NoUpdateOnLoopValue = pcall(function()
 	return UserSettings():IsUserFeatureEnabled("UserNoUpdateOnLoop")
