@@ -1,4 +1,5 @@
 1. Put CharacterCustomAnimate in StarterGui. (I know it's strange, but this is really a niche and decent workaround to initialize the script once the game loads.)
+	- Note: Keep the 'Includes' ModuleScript in WORKSPACE.
 
 2. Included is a RemoteEvent called 'OverrideCharacterAnimations', put this in anywhere in
 ReplicatedStorage.
