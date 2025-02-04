@@ -7,17 +7,31 @@ ReplicatedStorage.
 - **In case this bugs out try**:
 
 ```
-		[First Method]
-			* Underneath 'CharacterCustomAnimate', go to 'Settings' and you should see a
-			variable named 'EventPath'. Change that to the path of said RemoteEvent.
+	[First Method]
+		* Underneath 'CharacterCustomAnimate', go to 'Settings' and you should see a
+		variable named 'EventPath'. Change that to the path of said RemoteEvent.
 
-		[Second Method]
-			* Manually add the followings Folders to ReplicatedStorage:
-				- 'RemoteEvents' > 'Player' > [RemoteEvent]
-			* Drag the RemoteEvent in the 'Player' folder.
+	[Second Method]
+		* Manually add the followings Folders to ReplicatedStorage:
+			- 'RemoteEvents' > 'Player' > [RemoteEvent]
+		* Drag the RemoteEvent in the 'Player' folder.
 ```
 
-3. Create a new Script in ServerScriptService and type the code in here
+3. The rest is just moving the rest of the other modules.
+
+```
+
+	[AnimationBase]
+		* Create Folder in ReplicatedStorage: 'Animations'
+		* Drag the 'AnimationBase' ModuleScript in there.
+
+	[GroupHandler]
+		* Create Folder in ReplicatedStorage: 'UI'
+		* Drag the 'GroupHandler' ModuleScript in there.
+
+```
+
+4. Create a new Script in ServerScriptService and type the code in here
 
 ```lua
 
@@ -31,7 +45,7 @@ end)
 
 ```
 
-4. Overriding animations can be as simple as...
+5. Overriding animations can be as simple as...
 
 ```lua
 
