@@ -39,7 +39,7 @@ local OverrideCharacterAnimations = ([PathToOverrideCharacterAnimations])
 
 game.Players.PlayerAdded:Connect(function(player: Player)
 	player.CharacterAppearanceAdded:Connect(function(character: Model)
-		OverrideCharacterAnimations:FireServer(player, character, {ANIMATION_LIST});
+		OverrideCharacterAnimations:FireClient(player, character, {ANIMATION_LIST});
 	end)
 end)
 
@@ -53,7 +53,7 @@ end)
 
 game.Players.PlayerAdded:Connect(function(player: Player)
 	player.CharacterAppearanceAdded:Connect(function(character: Model)
-		OverrideCharacterAnimations:FireServer(player, character, {
+		OverrideCharacterAnimations:FireClient(player, character, {
 			[Animation] = { name = NAME, id = ASSET_ID }
 		})
 	end)
